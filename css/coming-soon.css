@@ -1,0 +1,118 @@
+/* Coming Soon */
+
+.comming-soon-area {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.comming-soon-area .comming-soon-title {
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .comming-soon-title {
+        font-size: 45px;
+    }
+}
+
+.comming-soon-title {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #01358D;
+    font-weight: 700;
+    padding-top: 100px;
+}
+
+@media(max-width: 768px) {
+    .comming-soon-title {
+        font-size: 45px !important;
+        padding-top: 0px !important;
+    }
+    .comming-soon-area .comming-soon-title {
+        margin-bottom: 0 !important;
+    }
+}
+
+.comming-soon-area .newsletter-subcribe p {
+    font-size: 20px;
+    color: #01358D;
+    margin-bottom: 35px;
+}
+
+.newsletter-subcribe .form-group input {
+    height: 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #97A1B2;
+    border-radius: 30px;
+    padding: 0 182px 0 38px;
+    font-size: var(--body-font-size);
+    letter-spacing: 0.45px;
+    color: #97A1B2;
+}
+
+.newsletter-subcribe .form-group .subcribe-submit {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    height: 54px;
+    line-height: 56px !important;
+    padding: 0 39px;
+    font-size: 17px;
+    letter-spacing: 1.02px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 24px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    border: 0 !important;
+}
+
+.btn-blue {
+    background: #01358D;
+    color: #fff;
+}
+
+.newsletter-subcribe .form-group {
+    position: relative;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .comming-soon-area .newsletter-subcribe {
+        margin-top: 80px;
+    }
+}
+
+.comming-soon-thumb img {
+    max-width: 550px;
+}
+
+@media(max-width: 768px) {
+    .comming-soon-thumb img {
+        max-width: 220px;
+    }
+}
+
+.btn-back {
+    color: #162a75;
+    border: 1px solid #162a75;
+    margin-left: 20px;
+}
+
+.btn-back:hover {
+    background-color: #162a75;
+    border-color: #162a75;
+    transition: 0.5s ease;
+    color: #fff;
+}
