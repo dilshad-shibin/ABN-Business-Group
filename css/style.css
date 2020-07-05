@@ -4241,6 +4241,10 @@ form #success .alert button:after {
     margin-bottom: 2rem;
 }
 
+.mb-4 {
+    margin-bottom: 3.5rem;
+}
+
 
 /*--------------------- brand area end -----------*/
 
@@ -5006,4 +5010,16 @@ form #success .alert button:after {
 .option-height {
     max-height: 60px;
     overflow: auto;
+}
+
+.email-section {
+    background: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.table-color {
+    /* background-color: #fff !important; */
+    border-radius: 10px;
 }
