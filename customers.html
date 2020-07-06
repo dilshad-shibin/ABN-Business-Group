@@ -134,7 +134,7 @@
                             <option disabled selected hidden>Choose a Customer</option>
                             <option value = 1>Hospitals</option>   
                             <option value = 2>Clinics</option>
-                            <option value = 3>Stockist</option>
+                            <!-- <option value = 3>Stockist</option> -->
                             <option value= 4>Pharmacies</option>
                         </select>
                     </div>
@@ -148,7 +148,8 @@
                     <div class="map-responsive">
                         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125720.88798778618!2d76.23477334826443!3d10.03519035442534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080ed7ea21f053%3A0xc57fc3e99b692ceb!2sABN%20Arcade!5e0!3m2!1sen!2sin!4v1577165744981!5m2!1sen!2sin"
                             width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
-                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=171gYE--Xb7i-uCAcrbOaoZQcI5JO25JG" width="600" height="300"></iframe>
+                        <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=171gYE--Xb7i-uCAcrbOaoZQcI5JO25JG" width="600" height="300"></iframe> -->
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=171gYE--Xb7i-uCAcrbOaoZQcI5JO25JG" width="640" height="480"></iframe>
                     </div>
                 </div>
             </div>
@@ -307,16 +308,16 @@
 
     <script>
         /*-------------------------------------------------------
-                                            syntax 
-                                            MAIN.createRelatedSelector(
-                                            from   -> the filtering element           
-                                            to     -> the element for filtered options
-                                            obj    -> An object containing the options per
-                                            option of the filtering (from) element
-                                             [sort] -> optional sorting method for sorting
-                                                      of the complete or filtered options list
-                                  --------------------------------------------------------
-                                             */
+                                                            syntax 
+                                                            MAIN.createRelatedSelector(
+                                                            from   -> the filtering element           
+                                                            to     -> the element for filtered options
+                                                            obj    -> An object containing the options per
+                                                            option of the filtering (from) element
+                                                             [sort] -> optional sorting method for sorting
+                                                                      of the complete or filtered options list
+                                                  --------------------------------------------------------
+                                                             */
 
 
         //create the interdepent selectors
@@ -328,7 +329,7 @@
             MAIN.createRelatedSelector(document.querySelector('#customers'), document.querySelector('#customersNames'), {
                 Hospitals: ['RajaGiri Health care & Education Trust', 'Lakshmi Hospital-Ernamkulam', 'Lakshmi Hospital-Aluva', 'Little Flower Hospital', 'Sunrise Hospital', 'Karothukuzhi Hospital', 'ST Joseph Hospital', 'Najath Hospital', 'Co-operative Hospital- Kakkanad', 'Muvattapuzha Co-operative super speciality Hospital'],
                 Clinics: ['Santhi Clinic', 'Hridya Multispeciality Clinic', 'Oasis Poli Clinic', 'Dr. Nousahd ENT Clinic', 'Medicare Speciality Clinic', 'Rainbow clinic Kakkanad', 'Life Line Clinic & Laboratories', 'Fathima Clinic', 'Aiswarya Clinic'],
-                Stockist: ['xxxx', 'axx', 'bxxx', 'xxxxxxxxxx'],
+                // Stockist: ['xxxx', 'axx', 'bxxx', 'xxxxxxxxxx'],
                 Pharmacies: ['Al Dawaa Pharma', 'Sastha Medicals', 'Sevanam Medicals Aluva', 'Earayil Drug House', 'Paravur Drug lines', 'Life Medicals Aluva', 'Shanthi Medicals & Surgicals', 'We care Medicals', 'Puzhakkara Medicals', 'Highway Medicals']
             });
         }
