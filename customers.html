@@ -10,7 +10,6 @@
     <link href="css/flaticon.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
     <link href="css/style.css" rel="stylesheet">
 
 
@@ -29,7 +28,7 @@
     <!-- start page-wrapper -->
     <div class="page-wrapper">
         <!--====== Scroll To Top Area Start ======-->
-        <button id="back-to-top"><i class="fas fa-angle-double-up"></i></button>
+        <button id="back-to-top"><i class="fa fa-arrow-up"></i></button>
 
         <!-- Start header -->
         <header id="header" class="site-header header-style-1">
@@ -77,7 +76,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- end lower-topbar -->
             </div>
             <!-- end topbar -->
 
@@ -124,21 +122,21 @@
             </div>
         </section>
 
+        <!-- Filter Section -->
         <section class="section-padding bg1" style="padding-bottom: 0">
             <div class="container">
                 <div class="txt-filter">Filter Customers</div>
                 <div class="row justify-content-center pb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-6 pb-2">
 
                         <select id="customers" class="form-control">
                             <option disabled selected hidden>Choose a Customer</option>
                             <option value = 1>Hospitals</option>   
                             <option value = 2>Clinics</option>
-                            <!-- <option value = 3>Stockist</option> -->
                             <option value= 4>Pharmacies</option>
                         </select>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 pb-2">
                         <select id="customersNames" class="form-control">
                             <option disabled selected hidden>Select</option>
                         </select>
@@ -146,10 +144,9 @@
                 </div>
                 <div class="row mt-3">
                     <div class="map-responsive">
-                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125720.88798778618!2d76.23477334826443!3d10.03519035442534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080ed7ea21f053%3A0xc57fc3e99b692ceb!2sABN%20Arcade!5e0!3m2!1sen!2sin!4v1577165744981!5m2!1sen!2sin"
-                            width="600" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
-                        <!-- <iframe src="https://www.google.com/maps/d/u/0/embed?mid=171gYE--Xb7i-uCAcrbOaoZQcI5JO25JG" width="600" height="300"></iframe> -->
-                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=171gYE--Xb7i-uCAcrbOaoZQcI5JO25JG" width="640" height="480"></iframe>
+
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1G01bGYBWwYCtBLDdzY_pVCOlPF0962El" width="640" height="480"></iframe>
+
                     </div>
                 </div>
             </div>
@@ -225,7 +222,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="copyright text-center">
-                            <h4><a href="rhombusitsolutions.com">Designed with <img src="img/footer/love.png" width="13" class="blink-image" alt="Footer-love"> RhombusItSolutions</a> </h4>
+                            <h4><a href="rhombusitsolutions.com" target="_blank">Designed with <img src="img/footer/love.png" width="13" class="blink-image" alt="Footer-love"> RhombusItSolutions</a> </h4>
                         </div>
                     </div>
                 </div>
@@ -244,80 +241,21 @@
     ================================================== -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
-
-    <!-- Custom script for this template -->
     <script src="js/script.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/custom.js"></script>
-
-    <script>
-        $(".chosen").chosen();
-    </script>
-
-    <script>
-        // Initialize and add the map
-        function initMap() {
-            // The location of Uluru
-            var uluru = {
-                lat: 9.931233,
-                lng: 76.267303
-            };
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), {
-                    zoom: 6,
-                    center: uluru
-                });
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-
-        var coords = {
-            'PHI': '10.832108,76.299315',
-            'NYC': '9.766010,76.497667',
-            'HAR': '8.524139,76.936638'
-        };
-        // var city = $(".chosen(value)")
-
-        function changeMap(city) {
-            var c = coords[city].split(',');
-            var late = parseFloat(c[0]);
-            var lon = parseFloat(c[1]);
-            var uluru = {
-                lat: late,
-                lng: lon
-            };
-            console.log(uluru);
-            // The map, centered at Uluru
-            var map = new google.maps.Map(
-                document.getElementById('map'), {
-                    zoom: 12,
-                    center: uluru
-                });
-            // The marker, positioned at Uluru
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-    </script>
 
 
     <script>
         /*-------------------------------------------------------
-                                                            syntax 
-                                                            MAIN.createRelatedSelector(
-                                                            from   -> the filtering element           
-                                                            to     -> the element for filtered options
-                                                            obj    -> An object containing the options per
-                                                            option of the filtering (from) element
-                                                             [sort] -> optional sorting method for sorting
-                                                                      of the complete or filtered options list
-                                                  --------------------------------------------------------
-                                                             */
+                                                                         syntax 
+                                                                         MAIN.createRelatedSelector(
+                                                                         from   -> the filtering element           
+                                                                         to     -> the element for filtered options
+                                                                         obj    -> An object containing the options per
+                                                                         option of the filtering (from) element
+                                                                          [sort] -> optional sorting method for sorting
+                                                                                   of the complete or filtered options list
+                                                                        --------------------------------------------------------
+                                                                       */
 
 
         //create the interdepent selectors

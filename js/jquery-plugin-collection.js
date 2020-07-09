@@ -1,6 +1,4 @@
 /*
-@Author: ThemeMascot
-@URL: http://ThemeMascot.com
 
 Necessary jQuery Collection
 */
