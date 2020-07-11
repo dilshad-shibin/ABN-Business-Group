@@ -3627,6 +3627,28 @@ Faq
     margin-bottom: 30px;
 }
 
+.email-section {
+    position: relative;
+}
+
+.email-section .header {
+    position: relative;
+}
+
+.email-section h2 {
+    position: relative;
+}
+
+.email-section h2::before {
+    background-color: #0cb8b6;
+    bottom: -12px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 70px;
+}
+
 .contact-section h4::before {
     background-color: #0cb8b6;
     bottom: -12px;
@@ -5041,10 +5063,7 @@ form #success .alert button:after {
 }
 
 .email-section {
-    background: #f2f2f2;
-    padding: 20px;
-    margin-bottom: 50px;
-    border-radius: 10px;
+    padding: 80px 15px
 }
 
 .table-color {
