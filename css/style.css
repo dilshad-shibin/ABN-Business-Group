@@ -2476,6 +2476,15 @@ div#overview h5 {
     border-top: 1px solid rgba(9, 169, 167, 0.10980392156862745);
 }
 
+.section-padding .tablist li.active a {
+    background-color: #0cb8bc !important;
+    color: #fff !important;
+}
+
+.section-padding .tablist li a {
+    border-bottom-color: transparent;
+}
+
 .about-section .tablist li a:hover {
     /* background: #09a9a7; */
     background: #162a75;
