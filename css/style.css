@@ -2574,7 +2574,7 @@ div#overview h5 {
     border-radius: 0px;
     box-shadow: none;
     background: #fbfbfb;
-    height: 50px;
+    /* height: 50px; */
 }
 
 .form-control .placeholder {
@@ -5069,4 +5069,14 @@ form #success .alert button:after {
 .table-color {
     /* background-color: #fff !important; */
     border-radius: 10px;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media(max-width:700px) {
+    .team-banner {
+        display: none;
+    }
 }

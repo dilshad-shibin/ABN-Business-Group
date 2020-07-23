@@ -44,6 +44,13 @@ div.dataTables_wrapper div.dataTables_filter {
     top: 0;
 }
 
+@media(max-width: 991px) {
+    div.dataTables_wrapper div.dataTables_filter {
+        position: relative;
+        padding-left: 0 !important;
+    }
+}
+
 div.dataTables_wrapper div.dataTables_filter label {
     font-weight: normal;
     white-space: nowrap;
