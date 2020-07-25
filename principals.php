@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include("manufactures.php"); ?>  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-plugin-collection.js"></script>
     <!-- datatable -->
-
     <link rel="stylesheet" href="js/datatable/dataTables.bootstrap4.min.css">
 
     <style>
@@ -64,7 +63,7 @@
                                             </div>
                                             <div class="details">
                                                 <p>0484-2630-444</p>
-                                                <p>0484-6657-444</p>
+                                                <p>0484-2621-214</p>
                                             </div>
                                         </div>
                                         <div>
@@ -148,7 +147,7 @@
                                 <a href="#vco" data-toggle="tab">Varghese & Company</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#bruklyn" data-toggle="tab">Bruklyn Associates</a>
+                                <a  href="#bruklyn" data-toggle="tab">Bruklyn Associates</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#abn" data-toggle="tab">ABN Business Group</a>
@@ -164,26 +163,26 @@
                                             <tr>
                                                 <th scope="col" class="bg-success color-black">No</th>
                                                 <th scope="col" class="bg-success color-black">Company</th>
-                                                <th scope="col" class="bg-success color-black">Contribution</th>
+                                                <th scope="col" class="bg-success color-black" style="display:none">Contribution</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                       <?php $Varghese = getmanufactures(2); ?> 
+                                        
+                                         <tbody>
+                                             <?php 
+                                             $i = "0";
+                                             foreach($Varghese as $vargheseData){ 
+                                              $i++;
+                                             ?>
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td>CIPLA LIMITED</td>
-                                                <td>11.02</td>
+                                                <th scope="row"><?php echo $i ?></th>
+                                                <td><?php echo $vargheseData->name ?></td>
+                                                <td style="display:none"><?php echo $vargheseData->contribution ?></td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>ABBOTT LABORATORIES INDIA LTD.</td>
-                                                <td>7.38</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>LUPIN LIMITED</td>
-                                                <td>7.13</td>
-                                            </tr>
+                                            
+                                             <?php } ?>
                                         </tbody>
+                                        
                                     </table>
                                 </div>
                             </div>
@@ -195,25 +194,23 @@
                                             <tr>
                                                 <th scope="col" class="bg-success color-black">No</th>
                                                 <th scope="col" class="bg-success color-black">Company</th>
-                                                <th scope="col" class="bg-success color-black">Contribution</th>
+                                                <th scope="col" class="bg-success color-black" style="display:none">Contribution</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                         <?php $Bruklyn = getmanufactures(1);?> 
+                                       <tbody>
+                                             <?php 
+                                             $i = "0";
+                                             foreach($Bruklyn as $BruklynData){ 
+                                              $i++;
+                                             ?>
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td>TORRENT PHARMACEUTICALS</td>
-                                                <td>13.84</td>
+                                                <th scope="row"><?php echo $i ?></th>
+                                                <td><?php echo $BruklynData->name ?></td>
+                                                <td style="display:none"><?php echo $BruklynData->contribution ?></td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>SUN PHARMA - SOLAR.</td>
-                                                <td>11.02</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>MICRO LABS</td>
-                                                <td>10.16</td>
-                                            </tr>
+                                            
+                                             <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -226,25 +223,23 @@
                                             <tr>
                                                 <th scope="col" class="bg-success color-black">No</th>
                                                 <th scope="col" class="bg-success color-black">Company</th>
-                                                <th scope="col" class="bg-success color-black">Contribution</th>
+                                                <th scope="col" class="bg-success color-black" style="display:none">Contribution</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <?php $abn = getmanufactures(3);?> 
+                                         <tbody>
+                                             <?php 
+                                             $i = "0";
+                                             foreach($abn as $abnData){ 
+                                              $i++;
+                                             ?>
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td>SOLAR</td>
-                                                <td>13.89</td>
+                                                <th scope="row"><?php echo $i ?></th>
+                                                <td><?php echo $abnData->name ?></td>
+                                                <td style="display:none"><?php echo $abnData->contribution ?></td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>AJANTA PHARMA LIMITED</td>
-                                                <td>11.86</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>AKESISS PHARMA</td>
-                                                <td>9.24</td>
-                                            </tr>
+                                            
+                                             <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -256,6 +251,8 @@
             </div>
         </section>
 
+        <!-- Brand Section -->
+     
         <!-- Brand Section -->
         <section>
             <!-- start brand-section 1st-->
@@ -515,37 +512,7 @@
                     <div class="row">
                         <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="widget usefull-links-widget">
-                                <h3>Varghese & Co</h3>
-                                <address style="color: #fff;">
-                                    20/179-1&2, ABN Arcade, <br>
-                                    Great Lane Road, <br>
-                                    Bazar P.O, Aluva, <br>
-                                    Ernakulam,683101.
-                                </address>
-                                <ul>
-                                    <li><a href="tel:04846657444"><i class="fi flaticon-smartphone"></i><span class="ml-1">0484-6657-444</span></a></li>
-                                    <li><a href="mailto:info@abnbusinessgroup.com"><i class="fi flaticon-opened-email-envelope"></i><span class="ml-1">info@abnbusinessgroup.com</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="widget usefull-links-widget">
-                                <h3>Bruklyn</h3>
-                                <address style="color: #fff;">
-                                    20/179-4, ABN Arcade, <br>
-                                    Great Lane Road, <br>
-                                    Bazar P.O, Aluva, <br>
-                                    Ernakulam,683101
-                                </address>
-                                <ul>
-                                    <li><a href="tel:04846657444"><i class="fi flaticon-smartphone"></i><span class="ml-1">0484-6657-444</span></a></li>
-                                    <li><a href="mailto:info@abnbusinessgroup.com"><i class="fi flaticon-opened-email-envelope"></i><span class="ml-1">info@abnbusinessgroup.com</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="widget usefull-links-widget">
-                                <h3>ABN</h3>
+                                <h3>ABN Business Group</h3>
                                 <address style="color: #fff;">
                                     20/179-3, ABN Arcade, <br>
                                     Great Lane Road, <br>
@@ -553,13 +520,41 @@
                                     Ernakulam,683101.
                                 </address>
                                 <ul>
-                                    <li><a href="tel:04846657444"><i class="fi flaticon-smartphone"></i><span class="ml-1">0484-6657-444</span></a></li>
+                                    <li><a href="tel:9846216601"><i class="fi flaticon-smartphone"></i><span class="ml-1">984-621-6601</span></a></li>
                                     <li><a href="mailto:info@abnbusinessgroup.com"><i class="fi flaticon-opened-email-envelope"></i><span class="ml-1">info@abnbusinessgroup.com</span></a></li>
                                 </ul>
                             </div>
                         </div>
-
-
+                        <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="widget usefull-links-widget">
+                                <h3>Varghese & Company</h3>
+                                <address style="color: #fff;">
+                                    20/179-1&2, ABN Arcade, <br>
+                                    Great Lane Road, <br>
+                                    Bazar P.O, Aluva, <br>
+                                    Ernakulam,683101.
+                                </address>
+                                <ul>
+                                    <li><a href="tel:9847474783"><i class="fi flaticon-smartphone"></i><span class="ml-1">984-747-4783</span></a></li>
+                                    <li><a href="mailto:info@abnbusinessgroup.com"><i class="fi flaticon-opened-email-envelope"></i><span class="ml-1">info@abnbusinessgroup.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="widget usefull-links-widget">
+                                <h3>Bruklyn Associates</h3>
+                                <address style="color: #fff;">
+                                    20/179-4, ABN Arcade, <br>
+                                    Great Lane Road, <br>
+                                    Bazar P.O, Aluva, <br>
+                                    Ernakulam,683101
+                                </address>
+                                <ul>
+                                    <li><a href="tel:9846216601"><i class="fi flaticon-smartphone"></i><span class="ml-1">984-621-6601</span></a></li>
+                                    <li><a href="mailto:info@abnbusinessgroup.com"><i class="fi flaticon-opened-email-envelope"></i><span class="ml-1">info@abnbusinessgroup.com</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="col col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="widget usefull-links-widget">
                                 <h3>Location</h3>
@@ -573,7 +568,6 @@
                 </div>
             </div>
         </footer>
-
 
         <!-- footer area start -->
         <footer class="footer-section">
@@ -592,7 +586,7 @@
 
     </div>
     <!-- End page-wrapper -->
-
+   <input id="searchBycompany" value="2" type="hidden">
 
     <!-- All JavaScript files
     ================================================== -->
@@ -605,8 +599,50 @@
     <script src="js/datatable/dataTables.bootstrap4.min.js"></script>
     <script src="js/datatables-demo.js"></script>
 
+<!--
+<script>
+$(document).ready(function(){
+   
+  var dataTable = $('#empTable').DataTable({
+    'ordering': true, 
+    'processing': true,
+    'serverSide': true,
+    'serverMethod': 'post',
+    'searching': true, // Remove default Search Control
+    'ajax': {
+       'url':'manufactures.php',
+       'data': function(data){
+     
+           // Read values
+          var companycode = $('#searchBycompany').val();
+         
+          // Append to data
+          data.searchBycompany = companycode;
+          
+       }
+    },
+    'columns': [
+       { data: 'no' }, 
+       { data: 'company' },
+       { data: 'contribution' },
+     
+    ]
+  });
 
+  $(".getmanufacture").on('click', function() {
+      $(".nav-item").removeClass("active");
+      $(this).closest(".nav-item").addClass("active");
+     var companycode= $(this).attr("data-id");
+      $("#searchBycompany").val(companycode);
+  
+      dataTable.clear().draw();
+  
+   dataTable.columns.adjust().draw(); // Redraw the DataTable
+  });
 
+});
+    </script>
+-->
 </body>
 
 </html>
