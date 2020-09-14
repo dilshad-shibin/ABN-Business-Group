@@ -5080,3 +5080,17 @@ form #success .alert button:after {
         display: none;
     }
 }
+
+.map-route img {
+    width: 100%;
+    height: 800px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 767px) {
+    .map-route img {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 30px;
+    }
+}
