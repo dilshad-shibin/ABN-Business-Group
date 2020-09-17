@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ABN Bussiness Group</title>
     <!-- Favicon and Touch Icons -->
-    <link href="images/favicon/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="img/abn_favicon.png" rel="shortcut icon" type="image/png">
     <!--  css files -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/flaticon.css" rel="stylesheet">
