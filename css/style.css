@@ -1804,6 +1804,17 @@ button:focus {
     }
 }
 
+@media(max-width: 576px){
+    .hero .slide{
+        min-height: 340px;
+        height: 300px;
+    }
+    .hero{
+        min-height: 340px;
+        height: 340px;
+    }
+}
+
 .hero .slide .slider-bg {
     display: none;
 }
@@ -2372,8 +2383,12 @@ button:focus {
     background-color: #f7f8fa;
 }
 
-.about-content {
+.about-content, .mission-content {
     padding: 0 10px;
+}
+
+.about-content p{
+    text-align: justify;
 }
 
 .about-img {
@@ -4944,6 +4959,12 @@ form #success .alert button:after {
     /* font-size: 4.5em; */
     margin-bottom: 20px;
     font-size: 50px
+}
+
+@media(max-width: 576px){
+    .odometer{
+        font-size: 30px;
+    }
 }
 
 .odometer-section .border-right {

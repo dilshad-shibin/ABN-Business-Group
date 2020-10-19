@@ -7,14 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> ABN Bussiness Group</title>
+    <!-- Favicon and Touch Icons -->
     <link href="img/abn_favicon.png" rel="shortcut icon" type="image/png">
-    <!-- styles -->
+    <!--  css files -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/flaticon.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Odomter -->
+    <link rel="stylesheet" href="css/odometer-theme-car.css">
+
+    <!-- external javascripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-plugin-collection.js"></script>
 
     <style>
         .navbar-nav li .active {
@@ -32,7 +41,6 @@
 
         <!--====== Scroll To Top Area Start ======-->
         <button id="back-to-top"><i class="fa fa-arrow-up"></i></button>
-        <!--====== Scroll To Top Area End ======-->
 
 
         <!-- Start header -->
@@ -64,7 +72,7 @@
                                                 <i class="fi flaticon-opened-email-envelope"></i>
                                             </div>
                                             <div class="details">
-                                                <p style="margin-top: 15px;">info@abnbusinessgroup.com</p>
+                                                <p style="margin-top: 10px;">info@abnbusinessgroup.com</p>
                                             </div>
                                         </div>
                                         <div>
@@ -82,6 +90,7 @@
                     </div>
                 </div>
             </div>
+            <!-- end topbar -->
 
             <nav class="navigation navbar navbar-default">
                 <div class="container">
@@ -97,10 +106,10 @@
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="index.html" class="active">Home</a>
                             </li>
                             <li>
-                                <a href="capabilities.html">Capabiities</a>
+                                <a href="capabilities.html">Capabilities</a>
                             </li>
                             <li>
                                 <a href="principals.php">Principals</a>
@@ -109,163 +118,171 @@
                                 <a href="customers.html">Customers</a>
                             </li>
                             <li>
-                                <a href="associates.html">Asssociates</a>
+                                <a href="associates.html">Associates</a>
 
                             </li>
-                            <li><a href="contact.html" class="active">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
+                    </div>
+                    <div class="search-minicart">
+                        <div class="mini-cart">
+                            <button class="btn about-submit-btn" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>
+                        </div>
                     </div>
                 </div>
             </nav>
         </header>
 
 
-        <!-- start page-title -->
-        <section class="page-title">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="title-box">
-                    <h1>Contact</h1>
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Contact</li>
-                    </ol>
+        <!-- start of hero slider -->
+        <section class="hero hero-slider-wrapper">
+            <div class="hero-slider">
+                <div class="slide">
+                    <div class=""></div>
+                    <div class="overlay"></div>
+                    <img src="img/banner/banner-1.jpg" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-md-7 col-sm-8 slide-caption">
+                                <h1>ABN Business Group</h1>
+                                <p>Leader in pharmaceutical inbound logistics, storage & distribution, and outbound logistics in Kerala.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class=""></div>
+                    <div class="overlay"></div>
+                    <img src="img/banner/warehouse.jpg" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-md-7 col-sm-8 slide-caption">
+                                <h1>ABN Business Group</h1>
+                                <p>Best in class automated warehousing facilities for room temprature and cold chain products.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class=""></div>
+                    <div class="overlay"></div>
+                    <img src="img/banner/warehouse-outside.jpg" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-md-7 col-sm-8 slide-caption">
+                                <h1>ABN Business Group</h1>
+                                <p>
+                                    Leasing warehousing facilities [20,000 square feet] to third parties.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class=""></div>
+                    <div class="overlay"></div>
+                    <img src="img/banner/banner-3.jpg" alt class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-md-7 col-sm-8 slide-caption">
+                                <h1>ABN Business Group</h1>
+                                <p>Vehicles equipped to transport cold chain and room temperature products.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide team-banner">
+                    <div class=""></div>
+                    <img src="img/banner/team.jpg" alt class="slider-bg">
                 </div>
             </div>
         </section>
 
-        <!--Divider Style Start-->
-        <section class="contact-section1">
+        <!-- Start odometer secton -->
+        <section class="about-section section-padding odometer-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-12 text-center border-right">
+                        <h3 class="mb-2">COMPANIES</h3>
+                        <div class="odometer-animate-number font-48" data-value="258" data-theme="car">0</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-12 text-center border-right">
+                        <h3 class="mb-2">CUSTOMERS</h3>
+                        <div class="odometer-animate-number font-48" data-value="2213" data-theme="car">0</div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-12 text-center">
+                        <h3 class="mb-2">SKU'S</h3>
+                        <div class="odometer-animate-number font-48" data-value="28761" data-theme="car">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- start about section -->
+        <section class="section-padding" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="contact-post">
-                            <div class="icon-box">
-                                <i class="fa fa-phone icon"></i>
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Phone Number</h5>
-                                <p class="oo_mb">+91 484-2621-214</p>
-                                <p>+91 484-6657-444</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="contact-post">
-                            <div class="icon-box"><i class="fi flaticon-opened-email-envelope"></i>
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Email Address</h5>
-                                <p class="oo_mb">info@abnbusinessgroup.com</p>
-                                <p>abnbusinessgroupaly@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="contact-post">
-                            <div class="icon-box">
-                                <i class="fa fa-map-marker icon"></i>
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Our Location</h5>
-                                <p>20/179-3, ABN Arcade,<br> Great Lane Road, Bazar P.O,<br> Aluva,  Ernakulam, Kerala, India.
-                            </div>
+                    <div class="col col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+                        <div class="section-title">
+                            <p>Read about ABN</p>
+                            <h2><span class="color-b">About</span> Us</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 email-section">
-                        <div class="header">
-                            <h2 class="mb-2">Email Contacts</h2>
+                    <div class="about-content">
+                        <div class="col-md-6 mb-3">
+                            <p> <b>ABN Group</b> is a leader in all supply chain activities involving inbound logistics, storage & operations, outbound logistics, marketing & Sales, retailing and all related services of health Care products in Kerala. Pharmaceutical
+                                Products Portfolio includes ethical brands, branded generics, generics and OTC products of all therapeutic classes of almost all multinational and Indian national pharmaceutical companies. The group also deals with many leading
+                                products in food & nutrition, personal care, and life style products. Strong presence in the market covering public institutions, private hospitals & clinics and retail pharmacies located not only in cities but also in peripheral
+                                and remote locations.</p>
                         </div>
-                        <div class="col-md-12">
-                            <h4 class="mb-3">1. Customer sales orders &mdash; <a href="mailto:orders@abnbusinessgroup.com">orders@abnbusinessgroup.com</a></h4>
-                            <h4 class="mb-3">2. Supplier purchase orders &mdash; <a href="mailto:po@abnbusinessgroup.com">po@abnbusinessgroup.com</a></h4>
-                            <h4 class="mb-3">3. Supplier/Customer claims and offers &mdash; <a href="mailto:claim@abnbusinessgroup.com">claim@abnbusinessgroup.com</a></h4>
-                            <h4 class="mb-3">4. Finance and accounts &mdash; <a href="mailto:finance@abnbusinessgroup.com">finance@abnbusinessgroup.com</a></h4>
-                            <h4 class="mb-3">5. Other enquiries &mdash; <a href="mailto:info@abnbusinessgroup.com">info@abnbusinessgroup.com</a></h4>
-                            <h4 class="mb-3">6. Partners &mdash;
-                                <select name="" id="" style="border: none;color: #337ab7;">
-                                    <option value=""><a href="mailto:naser@abnbusinessgroup.com">naser@abnbusinessgroup.com</a></option>
-                                    <option value=""><a href="mailto:babu@abnbusinessgroup.com">babu@abnbusinessgroup.com</a></option>
-                                    <option value=""><a href="mailto:kasim@abnbusinessgroup.com">kasim@abnbusinessgroup.com</a></option>
-                                </select>
-                            </h4>
-                        </div>
-                        <div class="col-md-12">
-
-                        </div>
+                        <div class="col-md-6 mb-3">
+                            <p> The group commenced operations in 2006 by acquiring the Flagship firm Varghese & Company, followed by acquisitions of ABN and Bruklyn in 2007 and 2011 respectively. The group has grown 100 times in sales
+                                and 5 times in number of employees since inception, in all these years has been consistently growing faster than the market. The operations is managed by partners with extensive understanding of the products and market of
+                                about two decades. Strategic and Finance management is by another partner with national & international professional certifications and exposure in diversified sectors including pharmaceutical in India and abroad.
+                            </p>
+                        </div> 
                     </div>
-
-
                 </div>
-                <!-- row -->
                 <div class="row">
-                    <div class="col-md-6 contact-section">
-                        <h4 class="">Contact Form</h4>
-                        <div class="form">
-                            <form id="contactForm" name="sentMessage" novalidate>
-                                <div class="row clearfix">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="form-group col-md-12">
-                                                <div class="form-group-inner">
-                                                    <div class="icon-box"><label for="your-name"><span class="icon fa fa-user"></span></label></div>
-                                                    <div class="field-outer">
-                                                        <input type="text" name="username" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <div class="form-group-inner">
-                                                    <div class="icon-box"><label for="your-email"><span class="icon fa fa-envelope"></span></label></div>
-                                                    <div class="field-outer">
-                                                        <input type="email" name="email" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <div class="form-group-inner">
-                                                    <div class="icon-box"><label for="your-phone"><span class="fi flaticon-smartphone"></span></label></div>
-                                                    <div class="field-outer">
-                                                        <input type="text" name="phone" placeholder="Phone" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="form-group col-md-12">
-                                                <div class="form-group-inner">
-                                                    <textarea name="message" placeholder="Your Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12">
-                                                <div id="success"></div>
-                                                <button type="submit" name="submit-form">Send Message &ensp; <span class="icon flaticon-envelope32"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6 contact-section">
-                        <h4 class="">Find Our Location</h4>
-                        <!--Map Area-->
-                        <div class="map-section">
-                            <div class="map-container" id="map-control">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125720.88798778618!2d76.23477334826443!3d10.03519035442534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080ed7ea21f053%3A0xc57fc3e99b692ceb!2sABN%20Arcade!5e0!3m2!1sen!2sin!4v1577165744981!5m2!1sen!2sin"
-                                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                            </div>
+                    <div class="col-md-12">
+                        <div class="mission-content">
+                            <p class="text-left"><strong>Mission & Values:</strong></p>
+                            <p>Our mission is to be a leader in South India in providing affordable and superior health care, nutrition, personal care and life style products meeting the existing and future needs of community. Our Value system is anchored on
+                                non-compromising ethical business practices, superior quality, utmost professionalism and trust.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login With</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-primary" onclick="redirectCustLogin();return false;">Customer Login</button>
+                        <button type="button" class="btn btn-success" onclick="redirectMfacLogin();return false;">Company Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- start footer -->
         <footer class="site-footer">
@@ -333,32 +350,31 @@
             </div>
         </footer>
 
-
         <!-- footer area start -->
         <footer class="footer-section">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="copyright text-center">
-                            <h4><a href="rhombusitsolutions.com">Designed with <img src="img/footer/love.png" width="13" class="blink-image" alt="Footer-love"> RhombusItSolutions</a> </h4>
+                            <h4><a href="rhombusitsolutions.com" target="_blank">Designed with <img src="img/footer/love.png" width="13" class="blink-image" alt="Footer-love"> RhombusItSolutions</a> </h4>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
 
+
     </div>
     <!-- end of page-wrapper -->
 
-
-
     <!-- All JavaScript files
     ================================================== -->
-    <script src="js/jquery.min.js"></script>
+
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-plugin-collection.js"></script>
     <script src="js/script.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/custom.js"></script>
+
 </body>
 
 </html>
